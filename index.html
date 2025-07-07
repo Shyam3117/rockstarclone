@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rockstar Games</title>
+    <link rel="icon" href="./Rockstar_logo_for_tweets.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Menbere:wght@100..700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0px;
+            background-color: #0b0b0b;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .navbar select {
+            border: none;
+            background-color: inherit;
+            color: white;
+            font-family: "Menbere", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 500;
+            font-style: normal;
+        }
+
+        .navbar {
+            background-color: black;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: "Menbere", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 500;
+            font-style: normal;
+        }
+
+        .navbar img {
+            padding-left: 70px;
+        }
+
+        .navbar-text {
+            display: flex;
+            justify-content: space-evenly;
+            margin: auto;
+            margin-right: 25px;
+            width: 50%;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .button-and-icons {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-right: 95px;
+            gap: 45px;
+        }
+
+        .user {
+            display: flex;
+            border-radius: 50%;
+            background-color: #262626;
+            padding: 10px;
+        }
+
+        .img-only {
+            height: 30px;
+            width: fit-content;
+        }
+
+        .get-launch {
+            background-color: #FCAF17;
+            padding: 8px 14px;
+            font-family: "Menbere", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 700;
+            font-style: normal;
+            border: none;
+            border-radius: 3px;
+        }
+
+        .image-and-text {
+            display: flex;
+            background-color: black;
+            border-top: 1px solid gray;
+            cursor: pointer;
+        }
+
+        .image-and-text p {
+            color: #e8e8e8;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.9rem;
+            font-weight: 700;
+            margin-top: 20px;
+        }
+
+        .image-and-text h1 {
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 2.3rem;
+        }
+
+        .text {
+            margin: 60px 0px 35px 40px;
+            padding-right: 50px;
+            height: 300px;
+        }
+
+        .learn-more {
+            margin-top: 5%;
+            padding: 20px 65px;
+            background-color: black;
+            color: white;
+            border: 2px solid white;
+            border-radius: 5px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: large;
+            font-weight: 700;
+        }
+
+        .learn-more:hover {
+            background-color: #FCAF17;
+            color: black;
+            border: none;
+            cursor: pointer;
+            transition: transform 2.0s ease-in-out;
+            font-size: large;
+            font-weight: 700;
+        }
+
+        .nwh1 {
+            padding: 30px 0px 10px 60px;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+
+        }
+
+        .newswire {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 0px 60px;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            border-radius: 8px;
+            background-color: white;
+            padding: 0px 0px 15px 0px;
+            box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.6);
+            background-color: #000000;
+            color: white;
+            border: 1px solid rgba(128, 128, 128, 0.3);
+        }
+
+        .card h1 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.5rem;
+            margin: 10px 25px;
+        }
+
+        .card p {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1rem;
+            margin: 25px;
+            font-weight: bold;
+        }
+
+        .card p spann {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .card img {
+            width: 100%;
+            height: 450px;
+            border-radius: 8px;
+        }
+
+        .view-more {
+            border: none;
+            color: white;
+            background-color: inherit;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 400;
+            font-size: 1.2rem;
+            margin: 2% 45%;
+            border-bottom: 4px solid #FCAF17;
+            border-radius: 3px;
+            padding-top: 5px;
+        }
+
+        .view-more:hover {
+            background-color: #FCAF17;
+            color: black;
+            cursor: pointer;
+        }
+
+        .text {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.8rem;
+            color: white;
+            font-weight: 600;
+            margin: 1px 65px;
+            width: fit-content;
+            height: fit-content;
+        }   
+
+        .gta-vi {
+            margin:25px 4.6%;
+            border-radius: 7px;
+            transition: transform 0.3s ease;
+        }
+
+        .gta-vi:hover {
+            transform: scale(1.03);
+            cursor: pointer;
+        }
+
+        .card-2 img {
+            width: 90%;
+            height: 380px;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .card-2 img:hover {
+            transform: scale(1.03);
+            cursor: pointer;
+        }
+        .subscribe-class{
+            background-image: url("https://i.redd.it/oz11vp10gtie1.jpeg");
+            height: 650px;
+            opacity: 0.6;
+        }
+        .rlogo-and-text{
+            color: white;
+            align-items: center;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.5rem;
+        }
+        .rlogo-and-text h2,p{
+            margin-right: 55px;
+        }
+        .rlogo-and-text button{
+            padding: 20px 35px;
+            border-radius: 30px;
+            background-color: inherit;
+            border: 1px solid white;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            font-size: 1rem;
+            margin-right: 55px;
+            transition: 0.2s ease;
+        }
+        .rlogo-and-text button:hover{
+            cursor: pointer;
+            background-color:#4d4d4d;
+            border: none;
+        }
+        .r-logo{
+            margin-top: 10%;
+            margin-right: 55px;
+        }
+        .footer {
+            background-color: #000;
+            color: #fff;
+            padding: 20px 40px;
+            font-family: Arial, sans-serif;
+        }
+
+        .footer-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        .footer-nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .language-selector {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .dropdown-icon {
+            font-size: 10px;
+        }
+
+        .footer-middle {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-legal {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-legal a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 12px;
+            opacity: 0.7;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .social-icon {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+
+        .social-icon:hover {
+            opacity: 1;
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .company-info {
+            display: flex;
+            gap: 500px;
+            
+        }
+        .company-name {
+            display: flex;
+            font-size: 14px;
+            opacity: 0.7;
+        }
+
+        .locations {
+            display: flex;
+            gap: 20px;
+        }
+
+        .locations span {
+            font-size: 14px;
+            opacity: 0.7;
+        }
+
+        .copyright {
+            font-size: 14px;
+            opacity: 0.7;
+        }
+
+        /* Hover effects */
+        .footer-nav a:hover,
+        .footer-legal a:hover {
+            opacity: 0.8;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .footer {
+                padding: 20px;
+            }
+
+            .footer-top,
+            .footer-middle,
+            .footer-bottom {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+            }
+
+            .footer-nav,
+            .footer-legal,
+            .social-links,
+            .locations {
+                justify-content: center;
+            }
+
+            .company-info {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <img src="https://w0.peakpx.com/wallpaper/776/772/HD-wallpaper-rockstar-games-logo-rockstargames-rokcstar-games.jpg"
+            alt="" width="3%">
+        <div class="navbar-text">
+            <select name="" id="">
+                <option value="">Games</option>
+                <option value=""></option>
+            </select>
+            <a href="">Newswire</a>
+            <a href="">Videos</a>
+            <a href="">Downloads</a>
+            <a href="">Store
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+
+
+            <a href="">Support
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+
+        </div>
+        <!-- <div class="button-and-icons">
+            <button class="get-launch">GET LAUNCHER</button>
+            <a href="">
+                <img class="img-only"
+                    src="https://media-rockstargames-com.akamaized.net/mfe6/prod/__common/img/902006563577748c7d58ac9c2bf5e6df.svg"
+                    alt="" />
+            </a>
+            <a href="">
+                <img class="img-only"
+                    src="https://media-rockstargames-com.akamaized.net/mfe6/prod/__common/img/a29e26aa160e7be7e845708c335b3c39.svg"
+                    alt="" />
+            </a>
+        </div> -->
+        <div class="button-and-icons">
+            <button class="get-launch">GET LAUNCHER</button>
+            <a href="">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <!-- <span class="material-symbols-outlined">search</span> -->
+            </a>
+            <a href="" class="user">
+                <i class="fa-regular fa-user"></i>
+                <!-- <span class="material-symbols-outlined">person</span> -->
+            </a>
+                    
+        </div>
+    </nav>
+    <div class="image-and-text">
+        <img src="https://www.rockstargames.com/VI/_next/image?url=%2FVI%2F_next%2Fstatic%2Fmedia%2FJason_and_Lucia_02_With_Logos_landscape.93ab5523.jpg&w=3840&q=75"
+            alt="" width="70%" title="Watch Trailer 2 Now">
+        <div class="text">
+            <p title="Watch Trailer 2 Now">Grand Theft Auto VI</p>
+            <h1 title="Watch Trailer 2 Now">Watch Trailer 2 Now</h1>
+            <a href="https://www.rockstargames.com/VI">
+                <button class="learn-more">LEARN MORE</button></a>
+        </div>
+    </div>
+    <h1 class="nwh1">Newswire</h1>
+    <div class="newswire">
+        <div class="card">
+            <img src="./Screenshot 2025-07-03 212306.png" alt="" width="100%">
+            <p>GTA Online <span style="color: #bfbcbc;">&nbsp;&nbsp;&nbsp;July 3, 2025</span></p>
+            <h1>Embrace the Freedom of the Open Road in GTA Online This Independence Day Weekend
+            </h1>
+        </div>
+        <div class="card">
+            <img src="./Screenshot 2025-07-03 211814.png" alt="" width="100%">
+            <p>Red Dead Online <span class="spann" style="color: #bfbcbc;">&nbsp;&nbsp;&nbsp;July 1, 2025</span></p>
+            <h1>Strange Tales of the West Emerge in Red Dead Online</h1>
+        </div>
+        <div class="card">
+            <img src="./Screenshot 2025-07-03 212135.png" alt="" width="30%">
+            <p>Rockstar Games<span style="color: #bfbcbc;">&nbsp;&nbsp;&nbsp;July 27, 2025</span></p>
+            <h1>You Go EP from Sparrow & Barbossa Now Available</h1>
+        </div>
+    </div>
+    <div class="newswire">
+        <div class="card">
+            <img src="./Screenshot 2025-07-07 111548.png" alt="" width="30%">
+            <p>GTA Online<span style="color: #4d4d4d;">&nbsp;&nbsp;&nbsp;June 26, 2025</span></p>
+            <h1>The Överflöd Suzume Supercar and New Safeguard Deliveries Now in GTA Online</h1>
+        </div>
+        <div class="card">
+            <img src="./Screenshot 2025-07-03 214327.png" alt="" width="100%">
+            <p>GTA Online<span class="spann" style="color: #bfbcbc;">&nbsp;&nbsp;&nbsp;June 17, 2025</span></p>
+            <h1>GTA+ Members Get Early Access to Claim the New Överflöd Suzume Supercar</h1>
+        </div>
+        <div class="card">
+            <img src="./Screenshot 2025-07-03 214123.png" alt="" width="30%">
+            <p>Rockstar Games<span style="color: #bfbcbc;">&nbsp;&nbsp;&nbsp;June 20, 2025</span></p>
+            <h1>CircoLoco Records Presents You Don't Own Me by Prospa, Josh Baker, and RAHH</h1>
+        </div>
+    </div>
+    <button class="view-more">View More</button>
+    <h3 class="text">Featured Games</h3>
+    <a href="https://www.rockstargames.com/VI">
+        <img class="gta-vi" src="./Screenshot 2025-07-04 105702.png" alt="" width="90%">
+    </a>
+    <div class="newswire">
+        <a href="https://www.rockstargames.com/gta-v">
+            <div class="card-2">
+                <img src="./Screenshot 2025-07-04 110602.png" alt="" width="100%">
+            </div>
+        </a>
+        <a href="https://www.rockstargames.com/gta-online">
+            <div class="card-2">
+                <img src="./Screenshot 2025-07-04 110746.png" alt="" width="100%">
+            </div>
+        </a>
+        <a href="https://www.rockstargames.com/reddeadredemption2">
+            <div class="card-2">
+                <img src="./Screenshot 2025-07-04 110828.png" alt="" width="100%">
+            </div>
+        </a>
+        <a href="https://www.rockstargames.com/reddeadredemption">
+            <div class="card-2">
+                <img src="./Screenshot 2025-07-04 110955.png" alt="" width="100%">
+            </div>
+                    
+        </a>
+
+    </div>
+    <button class="view-more">View More</button>
+    <div class="subscribe-class">
+        <div class="rlogo-and-text">
+            <img class="r-logo" src="./Picsart_25-07-07_11-55-04-718.png" alt="" width="10%">
+            <h2>Subscribe to the Rockstar Games Email List</h2>
+            <p>Sign up for our email newsletter to get info on game <br> announcements and updates, details on special events and offers,<br> and more from Rockstar Games and our affiliates.</p>
+            <button>Subscribe Now</button>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-top">
+            <nav class="footer-nav">
+                <a href="/contact">Contact</a>
+                <a href="/careers">Careers</a>
+                <a href="/community">Community Resources</a>
+                <a href="/subscribe">Subscribe</a>
+            </nav>
+            <div class="language-selector">
+                <span class="globe-icon">🌐</span>
+                <span>English</span>
+                <span class="dropdown-icon">▼</span>
+            </div>
+        </div>
+
+        <div class="footer-middle">
+            <nav class="footer-legal">
+                <a href="/corporate">Corporate</a>
+                <a href="/privacy">Privacy</a>
+                <a href="/cookie-settings">Cookie Settings</a>
+                <a href="/cookie-policy">Cookie Policy</a>
+                <a href="/legal">Legal</a>
+                <a href="/do-not-sell">Do Not Sell or Share My Personal Information</a>
+            </nav>
+            <div class="social-links">
+                <a href="#" class="social-icon">𝕏</a>
+                <a href="#" class="social-icon"><i class="fa-solid fa-camera"></i></a>
+                <a href="#" class="social-icon"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#" class="social-icon"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" class="social-icon"><i class="fa-brands fa-twitch"></i></a>
+                <a href="#" class="social-icon"><i class="fa-brands fa-discord"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="company-info">
+                <span class="company-name">Rockstar Games</span>
+                <div class="locations">
+                    <span>New York</span>
+                    <span>London</span>
+                    <span>Paris</span>
+                    <span>Bogotá</span>
+                </div>
+            </div>
+            <div class="copyright">MCMXCVIII</div>
+        </div>
+    </footer>
+</body>
+
+</html>
